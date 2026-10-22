@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Shihab Somik Khan | Portfolio & Social Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', 'Hind Siliguri', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.85);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
+
+    <!-- Theme Toggle Floating Button -->
+    <button id="themeToggle" class="fixed top-5 right-5 z-50 p-3 rounded-full glass shadow-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-amber-400 hover:scale-110 transition-all">
+        <i class="fa-solid fa-moon text-xl" id="themeIcon"></i>
+    </button>
+
+    <div class="max-w-4xl mx-auto px-4 py-10 space-y-8">
+
+        <!-- Hero & Profile Section -->
+        <header class="glass rounded-3xl p-8 shadow-xl border border-slate-200 dark:border-slate-800 text-center relative overflow-hidden">
+            <div class="w-32 h-32 mx-auto rounded-full ring-4 ring-blue-500/30 p-1 mb-4 shadow-inner">
+                <div class="w-full h-full bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+                    SK
+                </div>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-1">
+                MD. Shihab Somik Khan
+            </h1>
+            <p class="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                Civil Engineer & Tech Enthusiast
+            </p>
+            
+            <p class="text-slate-600 dark:text-slate-400 text-sm max-w-md mx-auto flex items-center justify-center gap-2 mb-6">
+                <i class="fa-solid fa-location-dot text-red-500"></i> Riyadh, Saudi Arabia
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#contacts" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-full text-sm shadow-md transition-all hover:shadow-blue-500/25">
+                    <i class="fa-solid fa-paper-plane mr-2"></i>যোগাযোগ করুন
+                </a>
+                <button onclick="copyVCard()" class="px-5 py-2.5 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-medium rounded-full text-sm transition-all">
+                    <i class="fa-solid fa-address-card mr-2"></i>vCard সেভ করুন
+                </button>
+            </div>
+        </header>
+
+        <!-- About Me Section -->
+        <section class="glass rounded-3xl p-8 shadow-xl border border-slate-200 dark:border-slate-800">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+                <i class="fa-solid fa-user-gear text-blue-600"></i> আমার সম্পর্কে
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                আমি পেশায় একজন <b>সিভিল ইঞ্জিনিয়ার (Civil Engineer)</b>। বর্তমানে রিয়াদ, সৌদি আরবে কর্মরতঃ আছি। পেশাগত কাজের পাশাপাশি প্রযুক্তি, অটোমেশন এবং নতুন ডিজিটাল স্কিল শিখতে আমি পছন্দ করি। এছাড়া খেলাধুলার প্রতি বিশেষ আগ্রহ রয়েছে, বিশেষ করে ফুটবল এবং আর্জেন্টিনা দলের খেলা উপভোগ করি।
+            </p>
+        </section>
+
+        <!-- Social Media Hub Links -->
+        <section class="glass rounded-3xl p-8 shadow-xl border border-slate-200 dark:border-slate-800">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+                <i class="fa-solid fa-share-nodes text-blue-600"></i> সোশ্যাল মিডিয়া লিংকসমূহ
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" class="flex items-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 hover:bg-blue-50 dark:hover:bg-blue-950/30 border border-slate-200 dark:border-slate-800 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="font-semibold text-sm">LinkedIn</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">পেশাগত প্রোফাইল</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"></i>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" class="flex items-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 hover:bg-blue-50 dark:hover:bg-blue-950/30 border border-slate-200 dark:border-slate-800 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="font-semibold text-sm">Facebook</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">পার্সোনাল প্রোফাইল</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"></i>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/966500000000" target="_blank" class="flex items-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 border border-slate-200 dark:border-slate-800 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="font-semibold text-sm">WhatsApp</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">সরাসরি মেসেজ করুন</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" class="flex items-center p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 hover:bg-pink-50 dark:hover:bg-pink-950/30 border border-slate-200 dark:border-slate-800 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="font-semibold text-sm">Instagram</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">ছবি ও মুহূর্তসমূহ</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-xs text-slate-400"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contacts" class="text-center text-xs text-slate-500 dark:text-slate-400 py-6">
+            <p>© 2026 MD. Shihab Somik Khan. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- Simple Script for Dark Mode & vCard -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                themeIcon.className = 'fa-solid fa-sun text-xl';
+            } else {
+                themeIcon.className = 'fa-solid fa-moon text-xl';
+            }
+        });
+
+        function copyVCard() {
+            alert("কন্টাক্ট ইনফো: MD. Shihab Somik Khan, Riyadh, Saudi Arabia");
+        }
+    </script>
+</body>
+</html>
